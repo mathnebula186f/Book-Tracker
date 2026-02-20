@@ -1,0 +1,322 @@
+/* Navbar */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .user-name {
+  color: #aaa;
+  font-style: italic;
+}
+
+.navbar .logout-btn {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.navbar .logout-btn:hover {
+  background-color: white;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Books Section */
+.books {
+  padding: 40px 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.books-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.books-header h2 {
+  margin: 0;
+}
+
+.add-book-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.add-book-btn:hover {
+  background-color: #219a52;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.book-card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-card h3 {
+  margin-bottom: 5px;
+}
+
+.book-card .author {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.book-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 20px;
+}
+
+.edit-btn {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.edit-btn:hover {
+  background-color: #2471a3;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Status Dropdown */
+.status-select {
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+.status-select.finished {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-select.reading {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-select.not-started {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.no-books {
+  text-align: center;
+  color: #888;
+  padding: 40px;
+  font-size: 1.1rem;
+}
+
+/* Book Form Overlay */
+.book-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.book-form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.book-form h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.book-form .form-group {
+  margin-bottom: 16px;
+}
+
+.book-form .form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.book-form .form-group input,
+.book-form .form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.book-form .form-group input:focus,
+.book-form .form-group select:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.book-form .error-text {
+  color: #e74c3c;
+  font-size: 0.82rem;
+  margin-top: 4px;
+  display: block;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.save-btn {
+  flex: 1;
+  padding: 10px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.save-btn:hover {
+  background-color: #219a52;
+}
+
+.cancel-btn {
+  flex: 1;
+  padding: 10px;
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cancel-btn:hover {
+  background-color: #7f8c8d;
+}
+
+/* About Section */
+.about {
+  padding: 40px 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+.about h2 {
+  margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact {
+  padding: 40px 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
