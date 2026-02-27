@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, Navigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import './Register.css'
 
@@ -9,8 +9,12 @@ function Register() {
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [errors, setErrors] = useState({})
-  const { register } = useAuth()
+  const { register, isAuthenticated } = useAuth()
   const navigate = useNavigate()
+
+  if (isAuthenticated) {
+    return <Navigate to="/" />
+  }
 
   const validate = () => {
     const newErrors = {}
